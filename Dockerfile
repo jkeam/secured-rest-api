@@ -4,11 +4,9 @@ WORKDIR /home/irisowner/dev
 
 ## install git
 USER root
-RUN apt update && apt-get -y install git
 COPY . /tmp/api
+RUN cp /usr/irissys/dev/Container/waitReady.sh /tmp/api/waitReady.sh
 USER irisowner
-
-## Embedded Python environment
 
 RUN --mount=type=bind,src=.,dst=. \
     iris start IRIS && \
