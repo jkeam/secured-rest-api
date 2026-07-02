@@ -6,7 +6,7 @@ USER root
 COPY . /tmp/api
 
 COPY --chown=irisowner --chmod=755 waitISC.sh /usr/irissys/dev/Cloud/ICM/
-COPY --chown=irisowner --chmod=755 waitISC.sh /usr/irissys/dev/Cloud/ICM/
+COPY --chown=irisowner --chmod=755 waitISC.log /usr/irissys/dev/Cloud/ICM/
 
 USER irisowner
 
