@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LOG_FILE=$(basename "$0")
-LOG_FILE="/tmp/api/${LOG_FILE%.*}".log
+LOG_FILE="${LOG_FILE%.*}".log
 
 #__functions___________________________________________________
 
