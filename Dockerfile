@@ -4,13 +4,9 @@ WORKDIR /home/irisowner/dev
 
 USER root
 COPY . /tmp/api
-RUN touch /tmp/api/wait.log && \
-    chmod 777 /tmp/api/wait.sh && \
-    chmod 777 /tmp/api/wait.log
 
-RUN touch /usr/irissys/dev/Cloud/ICM/waitISC.log \
-    chmod 777 /usr/irissys/dev/Cloud/ICM/waitISC.sh \
-    chmod 777 /usr/irissys/dev/Cloud/ICM/waitISC.log
+COPY --chown=irisowner --chmod=755 waitISC.sh /usr/irissys/dev/Cloud/ICM/
+COPY --chown=irisowner --chmod=755 waitISC.sh /usr/irissys/dev/Cloud/ICM/
 
 USER irisowner
 
