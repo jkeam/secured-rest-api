@@ -5,9 +5,9 @@ WORKDIR /home/irisowner/dev
 ## install git
 USER root
 COPY . /tmp/api
-RUN cp /usr/irissys/dev/Container/waitReady.sh /tmp/api/waitReady.sh \
-    touch /tmp/api/waitReady.log \
-    chmod 777 /tmp/api/waitReady.sh \
+RUN cp /usr/irissys/dev/Container/waitReady.sh /tmp/api/waitReady.sh && \
+    touch /tmp/api/waitReady.log && \
+    chmod 777 /tmp/api/waitReady.sh && \
     chmod 777 /tmp/api/waitReady.log
 
 USER irisowner
